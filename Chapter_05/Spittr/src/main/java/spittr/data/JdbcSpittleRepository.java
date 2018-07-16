@@ -34,8 +34,8 @@ public class JdbcSpittleRepository implements SpittleRepository {
         "select id, message, created_at, latitude, longitude" +
         " from Spittle" +
         " where id < ?" +
-        " order by created_at desc limit 20",
-        new SpittleRowMapper(), max);
+        " order by created_at desc limit ?",
+        new SpittleRowMapper(), max, count);
   }
 
   public Spittle findOne(long id) {
