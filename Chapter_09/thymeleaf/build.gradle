@@ -1,6 +1,7 @@
 apply plugin: 'eclipse'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
+apply plugin: 'idea'
 
 dependencies {
   compile "org.springframework:spring-webmvc:$springVersion"
@@ -31,7 +32,7 @@ repositories {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '1.8'
+  gradleVersion = '3.5.1'
 }
 
 war {
