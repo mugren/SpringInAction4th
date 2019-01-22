@@ -1,5 +1,6 @@
 apply plugin: 'eclipse'
 apply plugin: 'java'
+apply plugin: 'idea'
 
 dependencies {
 	compile "org.springframework:spring-context:$springVersion"
@@ -20,7 +21,7 @@ repositories {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.1'
+    gradleVersion = '3.5.1'
 }
 
 jar {
