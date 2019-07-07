@@ -18,7 +18,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("spittr.web")
+@ComponentScan(basePackages={"spittr.web", "spittr.api"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
   @Bean
