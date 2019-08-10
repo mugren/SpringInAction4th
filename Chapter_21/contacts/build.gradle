@@ -4,16 +4,23 @@ buildscript {
 	}
 
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
+apply plugin: 'idea'
 
 jar {
 	baseName = 'contacts'
 	version  = '0.1.0'
+}
+
+war {
+	baseName = 'contacts'
+	version =  '0.1.0'
 }
 
 repositories {
@@ -28,5 +35,5 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.0'
+	gradleVersion = '3.5.1'
 }
